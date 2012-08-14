@@ -53,12 +53,12 @@ clean:
 deb: repmgrd repmgr
 	mkdir -p ./debian/usr/bin
 	cp repmgrd repmgr ./debian/usr/bin/
-	mkdir -p ./debian/usr/share/postgresql/9.0/contrib/
-	cp sql/repmgr_funcs.sql ./debian/usr/share/postgresql/9.0/contrib/
-	cp sql/uninstall_repmgr_funcs.sql ./debian/usr/share/postgresql/9.0/contrib/
-	mkdir -p ./debian/usr/lib/postgresql/9.0/lib/
-	cp sql/repmgr_funcs.so ./debian/usr/lib/postgresql/9.0/lib/
+	mkdir -p ./debian/usr/share/postgresql/9.1/contrib/
+	cp sql/repmgr_funcs.sql ./debian/usr/share/postgresql/9.1/contrib/
+	cp sql/uninstall_repmgr_funcs.sql ./debian/usr/share/postgresql/9.1/contrib/
+	mkdir -p ./debian/usr/lib/postgresql/9.1/lib/
+	cp sql/repmgr_funcs.so ./debian/usr/lib/postgresql/9.1/lib/
 	dpkg-deb --build debian
-	mv debian.deb ../postgresql-repmgr-9.0_1.0.0.deb
+	mv debian.deb ../postgresql-repmgr-9.1_2.0.0.deb
 	rm -rf ./debian/usr
 
